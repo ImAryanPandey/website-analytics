@@ -63,11 +63,12 @@ app.get("/stats", async (req, res) => {
     };
 
     res.status(200).json(formattedResponse);
-  } catch (error) {}
+  } catch (error) {
     console.error("Error fetching stats:", error);
     res.status(500).json({
         error: 'Error fetching stats'
     });
+  }
 });
 
 app.listen(3001, () => {

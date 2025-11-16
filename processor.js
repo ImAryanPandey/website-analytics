@@ -9,7 +9,7 @@ console.log("Processor Connected to MongoDB");
 
 console.log('Processor (Service 2) connecting to Redis...');
 
-const worker = new Worker(' analytics-events', async (job) => {
+const worker = new Worker('analytics-events', async (job) => {
     const eventData = job.data;
 
     try {
